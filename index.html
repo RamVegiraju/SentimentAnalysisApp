@@ -3,18 +3,37 @@
 <html>
 
 <head>
-    <title>Sent Analysis Application</title>
+    <title>Sent Analysis App</title>
     <script src="script.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
-    <h1>Understand your text!</h1>
+    <h1>Sentiment Analysis Visualization Tool</h1>
+    <hr>
+    <br>
+    <h2></h2>
 
-    <textarea name="Enter your text" id="textInput" cols="30" rows="10"></textarea>
-    <button onclick="getResp();">Sentimentally!</button>
+    <textarea placeholder="Enter text" name="Enter your text" id="textInput" cols="150" rows="10"></textarea>
+    <br>
+    <button id = "sentButton" onclick="getResp();">Sentimentally!</button>
+    <br>
 
+
+    <!--
+    <div id = "outer" style="display: flex; text-align: right;">
+        <div id = "data description">
+          Data description
+        </div>
+  
+        <div id = "myDiv">
+        
+        </div>
+    </div> -->
     <div id = "myDiv"></div>
+
 </body>
 
 

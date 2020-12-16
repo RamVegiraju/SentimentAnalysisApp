@@ -8,11 +8,16 @@ function plotSentiment(posSent, negSent, neutSent, mixedSent) {
         }];
 
     var layout = {
-        height: 400,
-        width: 500
+        height: 300,
+        width: 400
     };
-    Plotly.newPlot('myDiv', data, layout);
+    Plotly.newPlot('myDiv', data, layout, align = "center");
 }
+
+/*Properly display Plotly graph
+function insertAfter(newElement, referenceElement) {
+    referenceElement.parentNode.insertBefore(newElement, referenceElement.nextSibling);
+}*/
 
 
 //Accessing AWS API GW REST API -> AWS Lambda -> AWS Comprehend for Sentiment Analysis
@@ -43,6 +48,13 @@ const getResp = function() {
         var negativeSent = outputRes.Negative * 100;
         var neutralSent = outputRes.Neutral * 100;
         var mixedSent = outputRes.Mixed * 100;
+
+        //var currElem = document.getElementById("sentButton");
+        //insertAfter(<h1>Plotly Graph</h1>, currElem);
+
+        var currElem = document.getElementById("sentButton");
+        var newElem = '<br><h2 style = "text-align: center; color: #404040;" id = "sentLine">Sentiment Distribution</h2>';
+        currElem.insertAdjacentHTML('afterend', newElem);
         plotSentiment(positiveSent, negativeSent, neutralSent, mixedSent);
     }).catch(function(error) {
         console.warn('Something went wrong', error);
