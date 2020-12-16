@@ -115,3 +115,224 @@ div .myDiv {
     padding: 10px;
 
 }
+
+
+
+/*
+Source: https://codepen.io/coswise/pen/YzyVZgJ
+// IMPORT
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700,900');
+
+// VARIABLES 
+// $canvasBg: #f7f7f7; Grey
+$canvasBg: #f1f3f9; // Bright #d5dbed
+
+$textC: #333333;
+$col1: #ff8c69;
+$col2: ff696c;
+$col3: #1462ff;
+$col4: #f0f1f5;
+
+$col3s: #4a74c9;
+
+$svgC: rgba(#929cd0, .8);
+// $shadowC: #d1d4e1;
+$shadowC: #d5dbed;
+$shadowDef: 0 3px 20px -3px $shadowC;
+$shadowDefTwo: 0 6px 30px -10px $shadowC;
+
+// PLACEHOLDERS
+%no-selection {
+  // No selection
+  -webkit-user-select: none;  
+  -moz-user-select: none;     
+  -ms-user-select: none;      
+  user-select: none;    
+}
+
+// DEFAULT
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $canvasBg;
+  height: 100vh;
+  font-family: 'Muli', Arial, sans-serif;
+}
+
+// SVGs
+#dribbble {
+  position: fixed;
+  display: block;
+  right: 70px;
+  bottom: 16px;
+  svg {
+    display: block;
+    width: 76px;
+    height: 24px;
+    fill: $svgC;
+  }
+}
+#twitter {
+  position: fixed;
+  display: block;
+  right: 25px;
+  bottom: 11px;
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: $svgC;
+  }
+}
+#hicon {
+  position: fixed;
+  display: block;
+  left: 25px;
+  bottom: -42px;
+  svg {
+    width: 78px;
+    height: 78px;
+    fill: $svgC;
+  }
+}
+
+// NEW CODE HERE
+// Variables
+$sW: 200px;
+$sH: 70px;
+
+// Placeholder
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%btn {
+  width: $sW;
+  height: $sH;
+}
+
+
+// Structure
+.concept-wrap {
+  @extend %btn;
+  position: relative;
+  cursor: pointer;
+}
+
+// Button
+.btn-wrap {
+  @extend %btn;
+  @extend %no-selection;
+  cursor: pointer;
+  position: absolute;
+  background: $col3;
+  border-radius: 12px;
+  box-shadow: 0 6px 30px -10px rgba($col3s, 1);
+  overflow: hidden;
+  transform: translateX(0);
+}
+
+// Content 
+.btn-cnt {
+  @extend %center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex-direction: row;
+  height: $sH;
+  width: $sW*4;
+  // transform: translateX(-200px);
+  z-index: 9;
+}
+
+.cnt {
+  @extend %center;
+  @extend %btn;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 0 25px;
+  .text {
+    text-align:left;
+    font-size: 1.4em;
+    margin-right: auto;
+    color: #fff;
+  }
+  .icon {
+    margin-top: 3px;
+    color: #fff;
+  }
+}
+
+// Tap
+.tap {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  background: transparent;
+  opacity: .4;
+  top: calc(50% - 69px);
+  right: -32px;
+  border-radius: 50%;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+// Wave
+.wave {
+  width: 30px;
+  height: 30px;
+  background: lighten($col3, 10%);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.wave-act {
+  animation: t-wave 599ms cubic-bezier(.77,.06,0,.99) forwards;
+}
+
+@keyframes t-wave {
+  0% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    width: 40px;
+    height: 40px;
+  }
+  50% {
+    opacity: .9;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 140px;
+    height: 140px;
+  }
+}
+
+// Lock
+.lock-on {
+  @extend %btn;
+  background: transparent;
+  position: absolute;
+  z-index: 11;
+  cursor: pointer;
+}
+
+// Test
+// .cnt > * {
+//   filter: blur(1px) drop-shadow(-4px 0 1px rgba(51,51,51,.9));
+// }
+
+*/
