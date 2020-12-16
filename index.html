@@ -6,28 +6,13 @@
     <title>Sent Analysis Application</title>
     <script src="script.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script>
-        function plotSentiment() {
-            var data = [{
-                values: [19, 26, 55],
-                labels: ['Residential', 'Non-Residential', 'Utility'],
-                type: 'pie'
-                }];
-
-            var layout = {
-                height: 400,
-                width: 500
-            };
-            Plotly.newPlot('myDiv', data, layout);
-        }
-    </script>
 </head>
 
 <body>
     <h1>Understand your text!</h1>
 
     <textarea name="Enter your text" id="textInput" cols="30" rows="10"></textarea>
-    <button onclick="getResp();plotSentiment();">Sentimentally!</button>
+    <button onclick="getResp();">Sentimentally!</button>
 
     <div id = "myDiv"></div>
 </body>

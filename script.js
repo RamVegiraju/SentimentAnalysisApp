@@ -1,4 +1,20 @@
 
+//For plotting sentiment values
+function plotSentiment(posSent, negSent, neutSent, mixedSent) {
+    var data = [{
+        values: [posSent,negSent,neutSent,mixedSent],
+        labels: ['Positive Sentiment', 'Negative Sentiment', 'Neutral Sentiment', 'Mixed Sentiment'],
+        type: 'pie'
+        }];
+
+    var layout = {
+        height: 400,
+        width: 500
+    };
+    Plotly.newPlot('myDiv', data, layout);
+}
+
+
 //Accessing AWS API GW REST API -> AWS Lambda -> AWS Comprehend for Sentiment Analysis
 const getResp = function() {
 
@@ -22,29 +38,13 @@ const getResp = function() {
         console.log(outputRes);
 
         //Extracting different sentiments from object
-        var positiveSent = outputRes.Positive;
-        //console.log(positiveSent);
-        var negativeSent = outputRes.Negative;
-        var neutralSent = outputRes.Neutral;
-        var mixedSent = outputRes.Mixed;
+        var positiveSent = outputRes.Positive * 100;
+        console.log(positiveSent);
+        var negativeSent = outputRes.Negative * 100;
+        var neutralSent = outputRes.Neutral * 100;
+        var mixedSent = outputRes.Mixed * 100;
+        plotSentiment(positiveSent, negativeSent, neutralSent, mixedSent);
     }).catch(function(error) {
         console.warn('Something went wrong', error);
     })
 };
-
-
-
-//For plotting sentiment values
-function plotSentiment() {
-    var data = [{
-        values: [19, 26, 55],
-        labels: ['Residential', 'Non-Residential', 'Utility'],
-        type: 'pie'
-        }];
-
-    var layout = {
-        height: 400,
-        width: 500
-    };
-    Plotly.newPlot('myDiv', data, layout);
-}
