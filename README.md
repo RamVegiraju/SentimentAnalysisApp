@@ -8,3 +8,4 @@ Web application that works with AWS Comprehend to visualize sentiment of user in
 ![](ezgif.com-gif-maker.gif)
 
 # Corresponding Medium Article
+https://towardsdatascience.com/building-full-stack-serverless-nlp-applications-with-javascript-aws-c63ca365cd15
