@@ -6,3 +6,5 @@ Web application that works with AWS Comprehend to visualize sentiment of user in
 
 # Demo
 ![](ezgif.com-gif-maker.gif)
+
+# Corresponding Medium Article
